@@ -1,0 +1,10 @@
+version: '2'
+services:
+  python3:
+    restart: always
+    build: .
+    container_name: 'python'
+    working_dir: '/root/'
+    command: 'tail -f /dev/null'
+    volumes:
+      - .:/root
